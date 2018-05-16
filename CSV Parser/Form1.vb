@@ -30,6 +30,8 @@ Public Class Form1
     Dim lastName As List(Of String) = New List(Of String)()
     Dim partFirstName As List(Of String) = New List(Of String)()
     Dim partLastName As List(Of String) = New List(Of String)()
+    Dim partFirstNameBlank As List(Of String) = New List(Of String)()
+    Dim partLastNameBlank As List(Of String) = New List(Of String)()
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReadCSV()
@@ -73,6 +75,9 @@ Public Class Form1
                 partLastName.Add(values(27))
             End While
 
+            RemoveEmptySpace(partFirstName, partFirstNameBlank)
+            RemoveEmptySpace(partLastName, partLastNameBlank)
+
             For i As Integer = 1 To displayName.Count()
                 ListBox1.Items.Add(displayName(i - 1))
                 ListBox2.Items.Add(email(i - 1))
@@ -102,6 +107,8 @@ Public Class Form1
                 ListBox26.Items.Add(lastName(i - 1))
                 ListBox27.Items.Add(partFirstName(i - 1))
                 ListBox28.Items.Add(partLastName(i - 1))
+                ListBox29.Items.Add(partFirstNameBlank.Count())
+                ListBox30.Items.Add(partLastNameBlank.Count())
                 count += 1
             Next
 
@@ -110,10 +117,6 @@ Public Class Form1
             checkNames()
 
         End Using
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        ReadCSV()
     End Sub
 
     Public Sub checkNames()
@@ -157,6 +160,16 @@ Public Class Form1
             SendKeys.Send("{ENTER}")
         Next
 
+    End Sub
+
+    Public Sub RemoveEmptySpace(ByVal initialList As List(Of String), ByVal savedList As List(Of String))
+        For i As Integer = 1 To initialList.Count()
+            Dim line As String = initialList.Item(i - 1)
+
+            If line Like "*[a-zA-Z]*" Then
+                savedList.Add(line)
+            End If
+        Next
     End Sub
 
     Private Sub noFormatClick(sender As Object, e As EventArgs) Handles btnEmail.Click
@@ -251,6 +264,14 @@ Public Class Form1
     End Sub
 
     Private Sub btnPartLastName_Click(sender As Object, e As EventArgs) Handles btnPartLastName.Click
+        allWrite(partLastName)
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnPartFirstBlank.Click
+        allWrite(partFirstName)
+    End Sub
+
+    Private Sub btnPartLastBlank_Click(sender As Object, e As EventArgs) Handles btnPartLastBlank.Click
         allWrite(partLastName)
     End Sub
 End Class
