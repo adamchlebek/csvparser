@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Text.RegularExpressions
 Public Class Form1
 
     Dim displayName As List(Of String) = New List(Of String)()
@@ -26,16 +27,18 @@ Public Class Form1
     Dim webPage2 As List(Of String) = New List(Of String)()
     Dim categories As List(Of String) = New List(Of String)()
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ReadCSV()
+    End Sub
 
     Public Sub ReadCSV()
-        Using reader = New StreamReader("U:\mailinglist.csv")
-
+        Using reader = New StreamReader("U:\mailinglistNEW.csv")
 
             Dim count As Integer = 0
 
             While Not reader.EndOfStream
                 Dim line = reader.ReadLine()
-                Dim values = line.Split(","c)
+                Dim values = line.Split("~"c)
                 displayName.Add(values(0))
                 email.Add(values(1))
                 emailAddress2.Add(values(2))
@@ -61,8 +64,6 @@ Public Class Form1
                 webPage2.Add(values(22))
                 categories.Add(values(23))
             End While
-
-
 
             For i As Integer = 1 To displayName.Count()
                 ListBox1.Items.Add(displayName(i - 1))
@@ -92,7 +93,7 @@ Public Class Form1
                 count += 1
             Next
 
-            Button2.Text = count
+            lblCount.Text = count
 
             checkNames()
 
@@ -112,26 +113,120 @@ Public Class Form1
             End If
         Next
 
-        Button2.Text = count
+        lblCount.Text = count
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        emailWrite(email)
-    End Sub
-
-    Public Sub emailWrite(ByVal selectedList As List(Of String))
-        Dim count As Integer = 0
+    Public Sub allWrite(ByVal selectedList As List(Of String))
         Threading.Thread.Sleep(2000)
         For i As Integer = 1 To selectedList.Count()
             SendKeys.Send(selectedList.Item(i - 1))
             SendKeys.Send("{ENTER}")
         Next
-
-        Button3.Text = count
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ReadCSV()
+    Public Sub emailWrite(ByVal selectedList As List(Of String))
+        Threading.Thread.Sleep(2000)
+        For i As Integer = 1 To selectedList.Count()
+            SendKeys.Send(selectedList.Item(i - 1).ToLower())
+            SendKeys.Send("{ENTER}")
+        Next
+    End Sub
+
+    Public Sub phoneWrite(ByVal selectedList As List(Of String))
+        Threading.Thread.Sleep(2000)
+        For i As Integer = 1 To selectedList.Count()
+            Dim number As String = Regex.Replace(selectedList.Item(i - 1), "[^0-9]", "")
+
+            If (number.Length = 11) Then
+                number = number.Substring(1)
+            End If
+            SendKeys.Send(number)
+            SendKeys.Send("{ENTER}")
+        Next
+
+    End Sub
+
+    Private Sub noFormatClick(sender As Object, e As EventArgs) Handles btnEmail.Click
+        emailWrite(email)
+    End Sub
+
+    Private Sub btnHomeAddress_Click(sender As Object, e As EventArgs) Handles btnHomeAddress.Click
+        allWrite(homeStreet)
+    End Sub
+
+    Private Sub btnHomeCity_Click(sender As Object, e As EventArgs) Handles btnHomeCity.Click
+        allWrite(homeCity)
+    End Sub
+
+    Private Sub btnHomeState_Click(sender As Object, e As EventArgs) Handles btnHomeState.Click
+        allWrite(homeState)
+    End Sub
+
+    Private Sub btnHomeZip_Click(sender As Object, e As EventArgs) Handles btnHomeZip.Click
+        allWrite(homeZip)
+    End Sub
+
+    Private Sub btnMobile_Click(sender As Object, e As EventArgs) Handles btnMobile.Click
+        phoneWrite(mobilePhone)
+    End Sub
+
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        phoneWrite(homePhone)
+    End Sub
+
+    Private Sub btnHomeFax_Click(sender As Object, e As EventArgs) Handles btnHomeFax.Click
+        phoneWrite(homeFax)
+    End Sub
+
+    Private Sub btnPager_Click(sender As Object, e As EventArgs) Handles btnPager.Click
+        phoneWrite(pager)
+    End Sub
+
+    Private Sub btnBusiness_Click(sender As Object, e As EventArgs) Handles btnBusiness.Click
+        phoneWrite(businessPhone)
+    End Sub
+
+    Private Sub btnBusinessName_Click(sender As Object, e As EventArgs) Handles btnBusinessName.Click
+
+    End Sub
+
+    Private Sub btnBusinessAddress_Click(sender As Object, e As EventArgs) Handles btnBusinessAddress.Click
+        allWrite(busAddress)
+    End Sub
+
+    Private Sub btnBusinessCity_Click(sender As Object, e As EventArgs) Handles btnBusinessCity.Click
+        allWrite(busCity)
+    End Sub
+
+    Private Sub btnBusinessState_Click(sender As Object, e As EventArgs) Handles btnBusinessState.Click
+        allWrite(busState)
+    End Sub
+
+    Private Sub btnBusinessZIP_Click(sender As Object, e As EventArgs) Handles btnBusinessZIP.Click
+        allWrite(busZip)
+    End Sub
+
+    Private Sub btnJobTitle_Click(sender As Object, e As EventArgs) Handles btnJobTitle.Click
+        allWrite(jobTitle)
+    End Sub
+
+    Private Sub btnOrganization_Click(sender As Object, e As EventArgs) Handles btnOrganization.Click
+        allWrite(organization)
+    End Sub
+
+    Private Sub btnNotes_Click(sender As Object, e As EventArgs) Handles btnNotes.Click
+        allWrite(notes)
+    End Sub
+    Private Sub btnCategories_Click(sender As Object, e As EventArgs) Handles btnCategories.Click
+        allWrite(categories)
+    End Sub
+
+    Private Sub btnEmail2_Click(sender As Object, e As EventArgs) Handles btnEmail2.Click
+        emailWrite(emailAddress2)
+    End Sub
+
+    Private Sub btnEmail3_Click(sender As Object, e As EventArgs) Handles btnEmail3.Click
+        emailWrite(emailAddress3)
     End Sub
 End Class
