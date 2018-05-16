@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
@@ -71,16 +70,15 @@ Partial Class Form1
         Me.lblCount = New System.Windows.Forms.Label()
         Me.btnEmail2 = New System.Windows.Forms.Button()
         Me.btnEmail3 = New System.Windows.Forms.Button()
+        Me.ListBox25 = New System.Windows.Forms.ListBox()
+        Me.ListBox26 = New System.Windows.Forms.ListBox()
+        Me.ListBox27 = New System.Windows.Forms.ListBox()
+        Me.ListBox28 = New System.Windows.Forms.ListBox()
+        Me.btnFirstName = New System.Windows.Forms.Button()
+        Me.btnLastName = New System.Windows.Forms.Button()
+        Me.btnPartFirstName = New System.Windows.Forms.Button()
+        Me.btnPartLastName = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(158, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Import CSV"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
         '
@@ -185,23 +183,23 @@ Partial Class Form1
         'ListBox13
         '
         Me.ListBox13.FormattingEnabled = True
-        Me.ListBox13.Location = New System.Drawing.Point(12, 298)
+        Me.ListBox13.Location = New System.Drawing.Point(994, 41)
         Me.ListBox13.Name = "ListBox13"
-        Me.ListBox13.Size = New System.Drawing.Size(76, 251)
+        Me.ListBox13.Size = New System.Drawing.Size(76, 225)
         Me.ListBox13.TabIndex = 26
         '
         'ListBox14
         '
         Me.ListBox14.FormattingEnabled = True
-        Me.ListBox14.Location = New System.Drawing.Point(94, 298)
+        Me.ListBox14.Location = New System.Drawing.Point(1076, 41)
         Me.ListBox14.Name = "ListBox14"
-        Me.ListBox14.Size = New System.Drawing.Size(76, 251)
+        Me.ListBox14.Size = New System.Drawing.Size(76, 225)
         Me.ListBox14.TabIndex = 25
         '
         'ListBox15
         '
         Me.ListBox15.FormattingEnabled = True
-        Me.ListBox15.Location = New System.Drawing.Point(176, 298)
+        Me.ListBox15.Location = New System.Drawing.Point(12, 298)
         Me.ListBox15.Name = "ListBox15"
         Me.ListBox15.Size = New System.Drawing.Size(76, 251)
         Me.ListBox15.TabIndex = 24
@@ -209,7 +207,7 @@ Partial Class Form1
         'ListBox16
         '
         Me.ListBox16.FormattingEnabled = True
-        Me.ListBox16.Location = New System.Drawing.Point(258, 298)
+        Me.ListBox16.Location = New System.Drawing.Point(94, 298)
         Me.ListBox16.Name = "ListBox16"
         Me.ListBox16.Size = New System.Drawing.Size(76, 251)
         Me.ListBox16.TabIndex = 23
@@ -217,7 +215,7 @@ Partial Class Form1
         'ListBox17
         '
         Me.ListBox17.FormattingEnabled = True
-        Me.ListBox17.Location = New System.Drawing.Point(340, 298)
+        Me.ListBox17.Location = New System.Drawing.Point(176, 298)
         Me.ListBox17.Name = "ListBox17"
         Me.ListBox17.Size = New System.Drawing.Size(76, 251)
         Me.ListBox17.TabIndex = 22
@@ -225,7 +223,7 @@ Partial Class Form1
         'ListBox18
         '
         Me.ListBox18.FormattingEnabled = True
-        Me.ListBox18.Location = New System.Drawing.Point(420, 298)
+        Me.ListBox18.Location = New System.Drawing.Point(256, 298)
         Me.ListBox18.Name = "ListBox18"
         Me.ListBox18.Size = New System.Drawing.Size(76, 251)
         Me.ListBox18.TabIndex = 21
@@ -233,7 +231,7 @@ Partial Class Form1
         'ListBox19
         '
         Me.ListBox19.FormattingEnabled = True
-        Me.ListBox19.Location = New System.Drawing.Point(502, 298)
+        Me.ListBox19.Location = New System.Drawing.Point(338, 298)
         Me.ListBox19.Name = "ListBox19"
         Me.ListBox19.Size = New System.Drawing.Size(76, 251)
         Me.ListBox19.TabIndex = 20
@@ -241,7 +239,7 @@ Partial Class Form1
         'ListBox20
         '
         Me.ListBox20.FormattingEnabled = True
-        Me.ListBox20.Location = New System.Drawing.Point(584, 298)
+        Me.ListBox20.Location = New System.Drawing.Point(420, 298)
         Me.ListBox20.Name = "ListBox20"
         Me.ListBox20.Size = New System.Drawing.Size(76, 251)
         Me.ListBox20.TabIndex = 19
@@ -249,7 +247,7 @@ Partial Class Form1
         'ListBox21
         '
         Me.ListBox21.FormattingEnabled = True
-        Me.ListBox21.Location = New System.Drawing.Point(666, 298)
+        Me.ListBox21.Location = New System.Drawing.Point(502, 298)
         Me.ListBox21.Name = "ListBox21"
         Me.ListBox21.Size = New System.Drawing.Size(76, 251)
         Me.ListBox21.TabIndex = 18
@@ -257,7 +255,7 @@ Partial Class Form1
         'ListBox22
         '
         Me.ListBox22.FormattingEnabled = True
-        Me.ListBox22.Location = New System.Drawing.Point(748, 298)
+        Me.ListBox22.Location = New System.Drawing.Point(584, 298)
         Me.ListBox22.Name = "ListBox22"
         Me.ListBox22.Size = New System.Drawing.Size(76, 251)
         Me.ListBox22.TabIndex = 17
@@ -265,7 +263,7 @@ Partial Class Form1
         'ListBox23
         '
         Me.ListBox23.FormattingEnabled = True
-        Me.ListBox23.Location = New System.Drawing.Point(830, 298)
+        Me.ListBox23.Location = New System.Drawing.Point(666, 298)
         Me.ListBox23.Name = "ListBox23"
         Me.ListBox23.Size = New System.Drawing.Size(76, 251)
         Me.ListBox23.TabIndex = 16
@@ -273,7 +271,7 @@ Partial Class Form1
         'ListBox24
         '
         Me.ListBox24.FormattingEnabled = True
-        Me.ListBox24.Location = New System.Drawing.Point(912, 298)
+        Me.ListBox24.Location = New System.Drawing.Point(748, 298)
         Me.ListBox24.Name = "ListBox24"
         Me.ListBox24.Size = New System.Drawing.Size(76, 251)
         Me.ListBox24.TabIndex = 15
@@ -352,7 +350,7 @@ Partial Class Form1
         '
         'btnPager
         '
-        Me.btnPager.Location = New System.Drawing.Point(12, 269)
+        Me.btnPager.Location = New System.Drawing.Point(994, 12)
         Me.btnPager.Name = "btnPager"
         Me.btnPager.Size = New System.Drawing.Size(76, 23)
         Me.btnPager.TabIndex = 35
@@ -361,7 +359,7 @@ Partial Class Form1
         '
         'btnBusiness
         '
-        Me.btnBusiness.Location = New System.Drawing.Point(94, 269)
+        Me.btnBusiness.Location = New System.Drawing.Point(1076, 12)
         Me.btnBusiness.Name = "btnBusiness"
         Me.btnBusiness.Size = New System.Drawing.Size(76, 23)
         Me.btnBusiness.TabIndex = 36
@@ -370,7 +368,7 @@ Partial Class Form1
         '
         'btnBusinessName
         '
-        Me.btnBusinessName.Location = New System.Drawing.Point(176, 269)
+        Me.btnBusinessName.Location = New System.Drawing.Point(12, 269)
         Me.btnBusinessName.Name = "btnBusinessName"
         Me.btnBusinessName.Size = New System.Drawing.Size(76, 23)
         Me.btnBusinessName.TabIndex = 37
@@ -379,7 +377,7 @@ Partial Class Form1
         '
         'btnBusinessAddress
         '
-        Me.btnBusinessAddress.Location = New System.Drawing.Point(258, 269)
+        Me.btnBusinessAddress.Location = New System.Drawing.Point(94, 269)
         Me.btnBusinessAddress.Name = "btnBusinessAddress"
         Me.btnBusinessAddress.Size = New System.Drawing.Size(76, 23)
         Me.btnBusinessAddress.TabIndex = 38
@@ -388,7 +386,7 @@ Partial Class Form1
         '
         'btnBusinessCity
         '
-        Me.btnBusinessCity.Location = New System.Drawing.Point(340, 269)
+        Me.btnBusinessCity.Location = New System.Drawing.Point(176, 269)
         Me.btnBusinessCity.Name = "btnBusinessCity"
         Me.btnBusinessCity.Size = New System.Drawing.Size(76, 23)
         Me.btnBusinessCity.TabIndex = 39
@@ -397,7 +395,7 @@ Partial Class Form1
         '
         'btnBusinessState
         '
-        Me.btnBusinessState.Location = New System.Drawing.Point(420, 269)
+        Me.btnBusinessState.Location = New System.Drawing.Point(256, 269)
         Me.btnBusinessState.Name = "btnBusinessState"
         Me.btnBusinessState.Size = New System.Drawing.Size(76, 23)
         Me.btnBusinessState.TabIndex = 40
@@ -406,7 +404,7 @@ Partial Class Form1
         '
         'btnBusinessZIP
         '
-        Me.btnBusinessZIP.Location = New System.Drawing.Point(502, 269)
+        Me.btnBusinessZIP.Location = New System.Drawing.Point(338, 269)
         Me.btnBusinessZIP.Name = "btnBusinessZIP"
         Me.btnBusinessZIP.Size = New System.Drawing.Size(76, 23)
         Me.btnBusinessZIP.TabIndex = 41
@@ -415,7 +413,7 @@ Partial Class Form1
         '
         'btnJobTitle
         '
-        Me.btnJobTitle.Location = New System.Drawing.Point(584, 269)
+        Me.btnJobTitle.Location = New System.Drawing.Point(420, 269)
         Me.btnJobTitle.Name = "btnJobTitle"
         Me.btnJobTitle.Size = New System.Drawing.Size(76, 23)
         Me.btnJobTitle.TabIndex = 42
@@ -424,7 +422,7 @@ Partial Class Form1
         '
         'btnOrganization
         '
-        Me.btnOrganization.Location = New System.Drawing.Point(666, 269)
+        Me.btnOrganization.Location = New System.Drawing.Point(502, 269)
         Me.btnOrganization.Name = "btnOrganization"
         Me.btnOrganization.Size = New System.Drawing.Size(76, 23)
         Me.btnOrganization.TabIndex = 43
@@ -433,7 +431,7 @@ Partial Class Form1
         '
         'btnNotes
         '
-        Me.btnNotes.Location = New System.Drawing.Point(748, 269)
+        Me.btnNotes.Location = New System.Drawing.Point(584, 269)
         Me.btnNotes.Name = "btnNotes"
         Me.btnNotes.Size = New System.Drawing.Size(76, 23)
         Me.btnNotes.TabIndex = 44
@@ -442,7 +440,7 @@ Partial Class Form1
         '
         'btnAnniversary
         '
-        Me.btnAnniversary.Location = New System.Drawing.Point(830, 269)
+        Me.btnAnniversary.Location = New System.Drawing.Point(666, 269)
         Me.btnAnniversary.Name = "btnAnniversary"
         Me.btnAnniversary.Size = New System.Drawing.Size(76, 23)
         Me.btnAnniversary.TabIndex = 45
@@ -451,7 +449,7 @@ Partial Class Form1
         '
         'btnCategories
         '
-        Me.btnCategories.Location = New System.Drawing.Point(912, 269)
+        Me.btnCategories.Location = New System.Drawing.Point(748, 269)
         Me.btnCategories.Name = "btnCategories"
         Me.btnCategories.Size = New System.Drawing.Size(76, 23)
         Me.btnCategories.TabIndex = 46
@@ -461,7 +459,7 @@ Partial Class Form1
         'lblCount
         '
         Me.lblCount.AutoSize = True
-        Me.lblCount.Location = New System.Drawing.Point(176, 17)
+        Me.lblCount.Location = New System.Drawing.Point(12, 17)
         Me.lblCount.Name = "lblCount"
         Me.lblCount.Size = New System.Drawing.Size(0, 13)
         Me.lblCount.TabIndex = 47
@@ -484,11 +482,87 @@ Partial Class Form1
         Me.btnEmail3.Text = "Email 3"
         Me.btnEmail3.UseVisualStyleBackColor = True
         '
+        'ListBox25
+        '
+        Me.ListBox25.FormattingEnabled = True
+        Me.ListBox25.Location = New System.Drawing.Point(830, 298)
+        Me.ListBox25.Name = "ListBox25"
+        Me.ListBox25.Size = New System.Drawing.Size(76, 251)
+        Me.ListBox25.TabIndex = 52
+        '
+        'ListBox26
+        '
+        Me.ListBox26.FormattingEnabled = True
+        Me.ListBox26.Location = New System.Drawing.Point(912, 298)
+        Me.ListBox26.Name = "ListBox26"
+        Me.ListBox26.Size = New System.Drawing.Size(76, 251)
+        Me.ListBox26.TabIndex = 53
+        '
+        'ListBox27
+        '
+        Me.ListBox27.FormattingEnabled = True
+        Me.ListBox27.Location = New System.Drawing.Point(994, 298)
+        Me.ListBox27.Name = "ListBox27"
+        Me.ListBox27.Size = New System.Drawing.Size(76, 251)
+        Me.ListBox27.TabIndex = 54
+        '
+        'ListBox28
+        '
+        Me.ListBox28.FormattingEnabled = True
+        Me.ListBox28.Location = New System.Drawing.Point(1076, 298)
+        Me.ListBox28.Name = "ListBox28"
+        Me.ListBox28.Size = New System.Drawing.Size(76, 251)
+        Me.ListBox28.TabIndex = 55
+        '
+        'btnFirstName
+        '
+        Me.btnFirstName.Location = New System.Drawing.Point(830, 269)
+        Me.btnFirstName.Name = "btnFirstName"
+        Me.btnFirstName.Size = New System.Drawing.Size(76, 23)
+        Me.btnFirstName.TabIndex = 56
+        Me.btnFirstName.Text = "First Name"
+        Me.btnFirstName.UseVisualStyleBackColor = True
+        '
+        'btnLastName
+        '
+        Me.btnLastName.Location = New System.Drawing.Point(912, 269)
+        Me.btnLastName.Name = "btnLastName"
+        Me.btnLastName.Size = New System.Drawing.Size(76, 23)
+        Me.btnLastName.TabIndex = 57
+        Me.btnLastName.Text = "Last Name"
+        Me.btnLastName.UseVisualStyleBackColor = True
+        '
+        'btnPartFirstName
+        '
+        Me.btnPartFirstName.Location = New System.Drawing.Point(994, 269)
+        Me.btnPartFirstName.Name = "btnPartFirstName"
+        Me.btnPartFirstName.Size = New System.Drawing.Size(76, 23)
+        Me.btnPartFirstName.TabIndex = 58
+        Me.btnPartFirstName.Text = "Part First"
+        Me.btnPartFirstName.UseVisualStyleBackColor = True
+        '
+        'btnPartLastName
+        '
+        Me.btnPartLastName.Location = New System.Drawing.Point(1076, 269)
+        Me.btnPartLastName.Name = "btnPartLastName"
+        Me.btnPartLastName.Size = New System.Drawing.Size(76, 23)
+        Me.btnPartLastName.TabIndex = 59
+        Me.btnPartLastName.Text = "Part Last"
+        Me.btnPartLastName.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1011, 561)
+        Me.ClientSize = New System.Drawing.Size(1221, 561)
+        Me.Controls.Add(Me.btnPartLastName)
+        Me.Controls.Add(Me.btnPartFirstName)
+        Me.Controls.Add(Me.btnLastName)
+        Me.Controls.Add(Me.btnFirstName)
+        Me.Controls.Add(Me.ListBox28)
+        Me.Controls.Add(Me.ListBox27)
+        Me.Controls.Add(Me.ListBox26)
+        Me.Controls.Add(Me.ListBox25)
         Me.Controls.Add(Me.btnEmail3)
         Me.Controls.Add(Me.btnEmail2)
         Me.Controls.Add(Me.lblCount)
@@ -536,15 +610,12 @@ Partial Class Form1
         Me.Controls.Add(Me.ListBox3)
         Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button1 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents ListBox2 As ListBox
@@ -593,4 +664,12 @@ Partial Class Form1
     Friend WithEvents lblCount As Label
     Friend WithEvents btnEmail2 As Button
     Friend WithEvents btnEmail3 As Button
+    Friend WithEvents ListBox25 As ListBox
+    Friend WithEvents ListBox26 As ListBox
+    Friend WithEvents ListBox27 As ListBox
+    Friend WithEvents ListBox28 As ListBox
+    Friend WithEvents btnFirstName As Button
+    Friend WithEvents btnLastName As Button
+    Friend WithEvents btnPartFirstName As Button
+    Friend WithEvents btnPartLastName As Button
 End Class

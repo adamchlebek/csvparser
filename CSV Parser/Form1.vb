@@ -26,6 +26,10 @@ Public Class Form1
     Dim webPage As List(Of String) = New List(Of String)()
     Dim webPage2 As List(Of String) = New List(Of String)()
     Dim categories As List(Of String) = New List(Of String)()
+    Dim firstName As List(Of String) = New List(Of String)()
+    Dim lastName As List(Of String) = New List(Of String)()
+    Dim partFirstName As List(Of String) = New List(Of String)()
+    Dim partLastName As List(Of String) = New List(Of String)()
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReadCSV()
@@ -63,6 +67,10 @@ Public Class Form1
                 webPage.Add(values(21))
                 webPage2.Add(values(22))
                 categories.Add(values(23))
+                firstName.Add(values(24))
+                lastName.Add(values(25))
+                partFirstName.Add(values(26))
+                partLastName.Add(values(27))
             End While
 
             For i As Integer = 1 To displayName.Count()
@@ -90,6 +98,10 @@ Public Class Form1
                 ListBox22.Items.Add(webPage(i - 1))
                 ListBox23.Items.Add(webPage2(i - 1))
                 ListBox24.Items.Add(categories(i - 1))
+                ListBox25.Items.Add(firstName(i - 1))
+                ListBox26.Items.Add(lastName(i - 1))
+                ListBox27.Items.Add(partFirstName(i - 1))
+                ListBox28.Items.Add(partLastName(i - 1))
                 count += 1
             Next
 
@@ -100,7 +112,7 @@ Public Class Form1
         End Using
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         ReadCSV()
     End Sub
 
@@ -187,10 +199,6 @@ Public Class Form1
         phoneWrite(businessPhone)
     End Sub
 
-    Private Sub btnBusinessName_Click(sender As Object, e As EventArgs) Handles btnBusinessName.Click
-
-    End Sub
-
     Private Sub btnBusinessAddress_Click(sender As Object, e As EventArgs) Handles btnBusinessAddress.Click
         allWrite(busAddress)
     End Sub
@@ -228,5 +236,21 @@ Public Class Form1
 
     Private Sub btnEmail3_Click(sender As Object, e As EventArgs) Handles btnEmail3.Click
         emailWrite(emailAddress3)
+    End Sub
+
+    Private Sub btnFirstName_Click(sender As Object, e As EventArgs) Handles btnFirstName.Click
+        allWrite(firstName)
+    End Sub
+
+    Private Sub btnLastName_Click(sender As Object, e As EventArgs) Handles btnLastName.Click
+        allWrite(lastName)
+    End Sub
+
+    Private Sub btnPartFirstName_Click(sender As Object, e As EventArgs) Handles btnPartFirstName.Click
+        allWrite(partFirstName)
+    End Sub
+
+    Private Sub btnPartLastName_Click(sender As Object, e As EventArgs) Handles btnPartLastName.Click
+        allWrite(partLastName)
     End Sub
 End Class
